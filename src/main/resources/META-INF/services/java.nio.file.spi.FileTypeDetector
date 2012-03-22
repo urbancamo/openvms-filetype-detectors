@@ -1,0 +1,2 @@
+eu.hecnet.file.detectors.openvms.DclFileTypeDetector
+eu.hecnet.file.detectors.openvms.FilenameBasedDetector
