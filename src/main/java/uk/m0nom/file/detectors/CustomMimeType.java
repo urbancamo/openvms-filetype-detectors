@@ -1,4 +1,4 @@
-package eu.hecnet.file.detectors;
+package uk.m0nom.file.detectors;
 
 
 /**
@@ -11,14 +11,14 @@ package eu.hecnet.file.detectors;
 public class CustomMimeType {
 	private String mimeType;
 	private String description;
-	private String matchingFilenames[];
+	private String[] matchingFilenames;
 	private boolean customDetector;
 
-	public CustomMimeType(String mimeType, String description, String matchingFilenames[]) {
+	public CustomMimeType(String mimeType, String description, String[] matchingFilenames) {
 		this(mimeType, description, matchingFilenames, false);
 	}
 
-	public CustomMimeType(String mimeType, String description, String matchingFilenames[], boolean customDetector) {
+	public CustomMimeType(String mimeType, String description, String[] matchingFilenames, boolean customDetector) {
 		setMimeType(mimeType);
 		setDescription(description);
 		setMatchingFilenames(matchingFilenames);
@@ -45,7 +45,7 @@ public class CustomMimeType {
 		return matchingFilenames;
 	}
 
-	public void setMatchingFilenames(String matchingFilenames[]) {
+	public void setMatchingFilenames(String[] matchingFilenames) {
 		this.matchingFilenames = matchingFilenames;
 	}
 

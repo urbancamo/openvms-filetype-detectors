@@ -1,4 +1,4 @@
-package eu.hecnet.file.detectors;
+package uk.m0nom.file.detectors;
 
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
@@ -10,7 +10,7 @@ public abstract class AbstractFileTypeDetector extends FileTypeDetector {
 
 	public String[] getValidExtensions() {
 		return new String[] {};
-	};
+	}
 
 	public abstract String getMimeType();
 
@@ -18,12 +18,7 @@ public abstract class AbstractFileTypeDetector extends FileTypeDetector {
 
 	/**
 	 * Determine if the given path has a matching extension
-	 * 
-	 * @param path
-	 * @param matchExtensions
-	 * @param caseSensistive
-	 * @return
-	 */
+     */
 	protected boolean isExtensionMatched(Path path, boolean caseSensitive) {
 		String extension = FileTypeDetectorUtils.getExtension(path);
 
