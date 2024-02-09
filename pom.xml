@@ -2,17 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>eu.hecnet.apps</groupId>
+	<groupId>uk.m0nom</groupId>
 	<artifactId>openvms-filetype-detectors</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<name>openvms-filetype-detectors</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<junit.version>4.8.2</junit.version>
-		<slf4j.version>1.5.10</slf4j.version>
-		<java.version>1.7</java.version>
+		<slf4j.version>2.0.12</slf4j.version>
+		<java.version>18</java.version>
 	</properties>
 
   <dependencies>
@@ -34,26 +33,21 @@
 			<version>${slf4j.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.sun.jdmk</groupId>
-					<artifactId>jmxtools</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jmx</groupId>
-					<artifactId>jmxri</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-	    <dependency>
-	      <groupId>junit</groupId>
-	      <artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-	    </dependency>
+	  <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+	  <dependency>
+		  <groupId>org.apache.logging.log4j</groupId>
+		  <artifactId>log4j-core</artifactId>
+		  <version>2.22.1</version>
+	  </dependency>
+
+	  <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	  <dependency>
+		  <groupId>org.junit.jupiter</groupId>
+		  <artifactId>junit-jupiter-api</artifactId>
+		  <version>5.10.2</version>
+		  <scope>test</scope>
+	  </dependency>
+
 	  </dependencies>
 
 	<build>

@@ -1,4 +1,4 @@
-package eu.hecnet.file.detectors;
+package uk.m0nom.file.detectors;
 
 import java.nio.file.Path;
 
@@ -34,7 +34,7 @@ public class FileTypeDetectorUtils {
 		int mid = basename.lastIndexOf(".");
 		String ext = "";
 		if (mid >= 0) {
-			ext = basename.substring(mid + 1, basename.length());
+			ext = basename.substring(mid + 1);
 		}
 		return ext;
 	}

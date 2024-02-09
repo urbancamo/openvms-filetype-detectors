@@ -1,4 +1,4 @@
-package eu.hecnet.file.detectors.openvms;
+package uk.m0nom.file.detectors.openvms;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import eu.hecnet.file.detectors.AbstractFileTypeDetector;
+import uk.m0nom.file.detectors.AbstractFileTypeDetector;
 
 /**
  * Detects DCL (DIGITAL Command Language) files

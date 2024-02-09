@@ -1,6 +1,6 @@
-package eu.hecnet.file.detectors.openvms;
+package uk.m0nom.file.detectors.openvms;
 
-import eu.hecnet.file.detectors.CustomMimeTypeLibrary;
+import uk.m0nom.file.detectors.CustomMimeTypeLibrary;
 
 public class VmsCustomMimeTypeLibrary extends CustomMimeTypeLibrary {
 

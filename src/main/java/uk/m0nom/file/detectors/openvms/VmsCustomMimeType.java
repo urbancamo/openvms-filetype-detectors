@@ -1,9 +1,9 @@
-package eu.hecnet.file.detectors.openvms;
+package uk.m0nom.file.detectors.openvms;
 
 import java.util.Collection;
 import java.util.HashSet;
 
-import eu.hecnet.file.detectors.CustomMimeType;
+import uk.m0nom.file.detectors.CustomMimeType;
 
 /**
  * Custom VMS mime-type. Here we're adding the ability to associate VMS Features
@@ -13,7 +13,7 @@ import eu.hecnet.file.detectors.CustomMimeType;
  */
 public class VmsCustomMimeType extends CustomMimeType {
 
-	private Collection<VmsFeature> features = new HashSet<VmsFeature>();
+	private Collection<VmsFeature> features = new HashSet<>();
 
 	public VmsCustomMimeType(String mimeType, String description, String[] matchingFilenames) {
 		super(mimeType, description, matchingFilenames);
@@ -24,12 +24,12 @@ public class VmsCustomMimeType extends CustomMimeType {
 	}
 
 	public VmsCustomMimeType(String mimeType, String description, String[] matchingFilenames, boolean customDetector,
-			VmsFeature features[]) {
+			VmsFeature[] features) {
 		super(mimeType, description, matchingFilenames, customDetector);
 
 	}
 
-	public VmsCustomMimeType(String mimeType, String description, String[] matchingFilenames, VmsFeature features[]) {
+	public VmsCustomMimeType(String mimeType, String description, String[] matchingFilenames, VmsFeature[] features) {
 		this(mimeType, description, matchingFilenames, false, features);
 	}
 
@@ -45,7 +45,7 @@ public class VmsCustomMimeType extends CustomMimeType {
 		return (VmsFeature[]) features.toArray();
 	}
 
-	public void setFeatures(VmsFeature newFeatures[]) {
+	public void setFeatures(VmsFeature[] newFeatures) {
 		features = new HashSet<VmsFeature>();
 		for (VmsFeature feature : newFeatures) {
 			features.add(feature);

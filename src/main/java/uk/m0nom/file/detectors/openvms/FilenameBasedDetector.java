@@ -1,4 +1,4 @@
-package eu.hecnet.file.detectors.openvms;
+package uk.m0nom.file.detectors.openvms;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,7 +6,7 @@ import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.spi.FileTypeDetector;
 
-import eu.hecnet.file.detectors.CustomMimeType;
+import uk.m0nom.file.detectors.CustomMimeType;
 
 /**
  * Generic detector that matches mime types to patterns in filenames
@@ -16,14 +16,14 @@ import eu.hecnet.file.detectors.CustomMimeType;
  */
 public class FilenameBasedDetector extends FileTypeDetector {
 
-	private VmsCustomMimeTypeLibrary mimeTypeLibrary;
+	private final VmsCustomMimeTypeLibrary mimeTypeLibrary;
 
 	public FilenameBasedDetector() {
 		mimeTypeLibrary = new VmsCustomMimeTypeLibrary();
 	}
 
 	@Override
-	public String probeContentType(Path path) throws IOException {
+	public String probeContentType(Path path) {
 		if (Files.isRegularFile(path, LinkOption.NOFOLLOW_LINKS)) {
 			for (String mimeType : mimeTypeLibrary.keySet()) {
 				CustomMimeType customMimeType = mimeTypeLibrary.get(mimeType);

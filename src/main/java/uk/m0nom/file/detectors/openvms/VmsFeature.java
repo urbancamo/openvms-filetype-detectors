@@ -1,4 +1,4 @@
-package eu.hecnet.file.detectors.openvms;
+package uk.m0nom.file.detectors.openvms;
 
 public enum VmsFeature {
 	/***/
@@ -8,7 +8,7 @@ public enum VmsFeature {
 	/***/
 	MAKEFILE("Makefile");
 
-	private String description;
+	private final String description;
 
 	VmsFeature(String description) {
 		this.description = description;
